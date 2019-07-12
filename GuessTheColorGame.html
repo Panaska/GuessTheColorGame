@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Java Script Game Guess The Color</title>
+<link href="GuessTheColorGame.css"  rel="stylesheet"/>
+
+</head>
+
+<body>
+<!-- <body> -->
+<div id="header">
+<div class="column"><h1>Guess The Color Game</h1>
+<p>I am thinking of one of these colors:</p></div>
+<div class="column"><button onclick="window.location.reload()" type="button">Start again</button>
+</div>
+</div>
+<div id = "container">
+
+  <table>
+    <tr>
+      <td><input type="checkbox" name="color1" id="azure" onclick="check_guess()"> Azure <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color2" id="blanchedalmond" onclick="check_guess()"> Blanchedalmond <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color3" id="crimson" onclick="check_guess()"> Crimson <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color4" id="dodgerblue" onclick="check_guess()"> Dodgerblue <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color5" id="gainsboro" onclick="check_guess()"> Gainsboro <span class="triangle">&#9654;</span></td>
+      <td><input type="checkbox" name="color6" id="honeydew" onclick="check_guess()"> Honeydew <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color7" id="indianred" onclick="check_guess()"> Indianred <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color8" id="lemonchiffon" onclick="check_guess()"> Lemonchiffon <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color9" id="limegreen" onclick="check_guess()"> Limegreen <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color10" id="mistyrose" onclick="check_guess()"> Mistyrose <span class="triangle">&#9654;</span></td>
+      <td><input type="checkbox" name="color11" id="oldlace" onclick="check_guess()"> Oldlace <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color12" id="palegreen" onclick="check_guess()"> Palegreen <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color13" id="papayawhip" onclick="check_guess()"> Papayawhip <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color14" id="peachpuff" onclick="check_guess()"> Peachpuff <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color15" id="sienna" onclick="check_guess()"> Sienna <span class="triangle">&#9654;</span></td>
+      <td><input type="checkbox" name="color16" id="springgreen" onclick="check_guess()"> Springgreen <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color17" id="tomato" onclick="check_guess()"> Tomato <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color18" id="thistle" onclick="check_guess()"> Thistle <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color19" id="turquoise" onclick="check_guess()"> Turquoise <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color20" id="violet" onclick="check_guess()"> Violet <span class="triangle">&#9654;</span></td>
+    </tr>
+  </table>
+  <h2></h2>
+</div>
+
+
+<p>What color I am thinking of?</p>
+
+
+<script src="GuessTheColorGame.js"></script>
+</body>
+</html>
