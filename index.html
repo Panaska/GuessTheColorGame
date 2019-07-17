@@ -16,29 +16,37 @@
 </div>
 </div>
 <div id = "container">
+  <div id="modal" class="modalItself">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p></p>
+    </div>
+
+  </div>
   <table>
     <tr>
-      <td><input type="checkbox" name="color1" id="azure" onclick="check_guess()"> Azure <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color2" id="blanchedalmond" onclick="check_guess()"> Blanchedalmond <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color3" id="crimson" onclick="check_guess()"> Crimson <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color4" id="dodgerblue" onclick="check_guess()"> Dodgerblue <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color5" id="gainsboro" onclick="check_guess()"> Gainsboro <span class="triangle">&#9654;</span></td>
-      <td><input type="checkbox" name="color6" id="honeydew" onclick="check_guess()"> Honeydew <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color7" id="indianred" onclick="check_guess()"> Indianred <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color8" id="lemonchiffon" onclick="check_guess()"> Lemonchiffon <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color9" id="limegreen" onclick="check_guess()"> Limegreen <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color10" id="mistyrose" onclick="check_guess()"> Mistyrose <span class="triangle">&#9654;</span></td>
-      <td><input type="checkbox" name="color11" id="oldlace" onclick="check_guess()"> Oldlace <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color12" id="palegreen" onclick="check_guess()"> Palegreen <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color13" id="papayawhip" onclick="check_guess()"> Papayawhip <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color14" id="peachpuff" onclick="check_guess()"> Peachpuff <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color15" id="sienna" onclick="check_guess()"> Sienna <span class="triangle">&#9654;</span></td>
-      <td><input type="checkbox" name="color16" id="springgreen" onclick="check_guess()"> Springgreen <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color17" id="tomato" onclick="check_guess()"> Tomato <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color18" id="thistle" onclick="check_guess()"> Thistle <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color19" id="turquoise" onclick="check_guess()"> Turquoise <span class="triangle">&#9654;</span><br>
-      <input type="checkbox" name="color20" id="violet" onclick="check_guess()"> Violet <span class="triangle">&#9654;</span></td>
+      <td><input type="checkbox" name="color1" id="azure" onclick="check_guess()"> <label for="azure">Azure</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color2" id="blanchedalmond" onclick="check_guess()"> <label for="blanchedalmond">Blanchedalmond</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color3" id="crimson" onclick="check_guess()"> <label for="crimson">Crimson</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color4" id="dodgerblue" onclick="check_guess()"> <label for="dodgerblue">Dodgerblue</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color5" id="gainsboro" onclick="check_guess()"> <label for="gainsboro">Gainsboro</label> <span class="triangle">&#9654;</span></td>
+      <td><input type="checkbox" name="color6" id="honeydew" onclick="check_guess()"> <label for="honeydew">Honeydew</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color7" id="indianred" onclick="check_guess()"> <label for="indianred">Indianred</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color8" id="lemonchiffon" onclick="check_guess()"> <label for="lemonchiffon">Lemonchiffon</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color9" id="limegreen" onclick="check_guess()"> <label for="limegreen">Limegreen</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color10" id="mistyrose" onclick="check_guess()"> <label for="mistyrose">Mistyrose</label> <span class="triangle">&#9654;</span></td>
+      <td><input type="checkbox" name="color11" id="oldlace" onclick="check_guess()"> <label for="oldlace">Oldlace</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color12" id="palegreen" onclick="check_guess()"> <label for="palegreen">Palegreen</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color13" id="papayawhip" onclick="check_guess()"> <label for="papayawhip">Papayawhip</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color14" id="peachpuff" onclick="check_guess()"> <label for="peachpuff">Peachpuff</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color15" id="sienna" onclick="check_guess()"> <label for="sienna">Sienna</label> <span class="triangle">&#9654;</span></td>
+      <td><input type="checkbox" name="color16" id="springgreen" onclick="check_guess()"> <label for="springgreen">Springgreen</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color17" id="tomato" onclick="check_guess()"> <label for="tomato">Tomato</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color18" id="thistle" onclick="check_guess()"> <label for="thistle">Thistle</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color19" id="turquoise" onclick="check_guess()"> <label for="turquoise">Turquoise</label> <span class="triangle">&#9654;</span><br>
+      <input type="checkbox" name="color20" id="violet" onclick="check_guess()"> <label for="violet">Violet</label> <span class="triangle">&#9654;</span></td>
     </tr>
   </table>
   <h2></h2>

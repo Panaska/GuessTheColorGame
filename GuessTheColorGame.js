@@ -31,12 +31,32 @@ console.log(target);
 //
 // }
 
+let modal = document.getElementById("modal");
+let spanClose = document.getElementsByClassName("close")[0];
+//modal.style.display = "block";
+
+spanClose.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+let labels = document.getElementsByTagName("label");
+for (let i = 0; i < labels.length; i++) {
+  labels[i].style.backgroundColor = document.getElementsByTagName("input")[i].id;
+}
 let triangles = document.getElementsByClassName("triangle");
 for (let i = 0; i < triangles.length; i++) {
   triangles[i].style.color = document.getElementsByTagName("input")[i].id;
 }
-function check_guess()  {
 
+function check_guess()  {
+let content = document.getElementsByClassName("modal-content")[0].getElementsByTagName("p")[0];
   // Get the checkbox
     let checkBoxes = document.getElementsByTagName("input");
     for (checkBox of checkBoxes) {
@@ -45,26 +65,39 @@ function check_guess()  {
 
         if(colors.indexOf(color) == -1)
 
-        {alert ("I don\'t recognize that color!");
-        return false;}
+        {
+
+        content.innerHTML = "I don\'t recognize that color!";
+        modal.style.display = "block";
+          // alert ("I don\'t recognize that color!");
+        return false;
+      }
 
         if (color < target)
 
-        {alert ("Your color is alphabetically lower than mine!");
+        {
+          // alert ("Your color is alphabetically lower than mine!");
+          content.innerHTML = "Your color is alphabetically lower than mine!";
+          modal.style.display = "block";
         checkBox.checked = false;
         guess_number += 1;
         return false;}
 
         if (color > target)
 
-        {alert ("Your color is alphabetically higher than mine!");
+        {content.innerHTML = "Your color is alphabetically higher than mine!";
+        modal.style.display = "block";
+          // alert ("Your color is alphabetically higher than mine!");
         checkBox.checked = false;
         guess_number += 1;
         return false;}
 
         document.getElementsByTagName("body")[0].style.background=target;
         document.getElementsByTagName("h2")[0].innerHTML="CORRECT!";
-        alert ((guess_number == 0) ? "Congratulations! You took 1 guess!" : "Congratulations!\n\n" + "You took " + (guess_number + 1) + " guesses!");
+        content.innerHTML = (guess_number == 0) ? "Congratulations! You took 1 guess!" : "Congratulations!\n\n" + "You took " + (guess_number + 1) + " guesses!";
+        modal.style.display = "block";
+        // alert ((guess_number == 0) ? "Congratulations! You took 1 guess!" : "Congratulations!\n\n" + "You took " + (guess_number + 1) + " guesses!");
+
         return true;
 
 
