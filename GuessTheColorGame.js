@@ -8,10 +8,10 @@ var guess_number=0;
 var colors = ["azure", "blanchedalmond", "crimson", "dodgerblue", "gainsboro", "honeydew", "indianred", "lemonchiffon", "limegreen", "mistyrose", "oldlace", "palegreen", "papayawhip", "peachpuff", "sienna", "springgreen", "tomato", "thistle", "turquoise", "violet"];
 
 target_index=Math.floor(Math.random ()*20);
-console.log (target_index);
+// console.log (target_index);
 
 target = colors[target_index];
-console.log(target);
+// console.log(target);
 
 // function do_game()  {
 //
@@ -66,7 +66,6 @@ let content = document.getElementsByClassName("modal-content")[0].getElementsByT
         if(colors.indexOf(color) == -1)
 
         {
-
         content.innerHTML = "I don\'t recognize that color!";
         modal.style.display = "block";
           // alert ("I don\'t recognize that color!");
@@ -77,21 +76,27 @@ let content = document.getElementsByClassName("modal-content")[0].getElementsByT
 
         {
           // alert ("Your color is alphabetically lower than mine!");
-          content.innerHTML = "Your color is alphabetically lower than mine!";
+          content.innerHTML = "Your color is alphabetically LOWER than mine!";
+          modal.getElementsByClassName("modal-content")[0].classList.add("redBlock");
           modal.style.display = "block";
         checkBox.checked = false;
         guess_number += 1;
-        return false;}
+        return false;
+      }
 
         if (color > target)
 
-        {content.innerHTML = "Your color is alphabetically higher than mine!";
+        {content.innerHTML = "Your color is alphabetically HIGHER than mine!";
+          modal.getElementsByClassName("modal-content")[0].classList.add("redBlock");
         modal.style.display = "block";
           // alert ("Your color is alphabetically higher than mine!");
         checkBox.checked = false;
         guess_number += 1;
         return false;}
-
+  modal.getElementsByClassName("modal-content")[0].classList.add("greenBlock");
+  document.getElementById("color-image").src = "images/" + color + ".jpg";
+        document.getElementsByTagName("figcaption")[0].innerHTML = color;
+        document.getElementsByTagName("figcaption")[0].style.color = color;
         document.getElementsByTagName("body")[0].style.background=target;
         document.getElementsByTagName("h2")[0].innerHTML="CORRECT!";
         content.innerHTML = (guess_number == 0) ? "Congratulations! You took 1 guess!" : "Congratulations!\n\n" + "You took " + (guess_number + 1) + " guesses!";

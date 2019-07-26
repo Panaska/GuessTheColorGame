@@ -12,7 +12,7 @@ margin:0.2em 0;
 button {
 margin: 30px auto 0;
 padding:10px 20px;
-background-color: #99BCC2;
+background-color: #98C3C3;
 font-size: 1.3em;
 cursor:pointer;
 /* display:block; */
@@ -44,14 +44,14 @@ input {
 
 /* The Modal (background) */
 .modalItself {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 20; /* Sit on top */
+display: none;
+position: fixed;
+z-index: 20;
 left: 0;
 top: 0;
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-overflow: auto; /* Enable scroll if needed */
+width: 100%;
+height: 100%;
+overflow: auto;
 /* background-color: rgb(0,0,0); /* Fallback color */ */
 background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -59,10 +59,10 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 /* Modal Content/Box */
 .modal-content {
 background-color: #98C3C3;
-margin: 15% auto; /* 15% from the top and centered */
+margin: 15% auto;
 padding: 20px;
-border: 4px solid #878787;
-width: 50%; /* Could be more or less, depending on screen size */
+border: 4px solid #5E5E5E;
+width: 50%;
 }
 
 .modal-content img {
@@ -72,7 +72,7 @@ margin: 0 auto;
 }
 
 .modal-content p {
-color: #878787;
+color: #363636;
 font-size: 1.4em;
 font-weight:600;
 }
@@ -94,4 +94,22 @@ cursor: pointer;
 
 .openModal {
 cursor: pointer;
+}
+
+.redBlock {
+  background-color: #FF3333;
+  border: 4px solid #FF0000;
+}
+
+.greenBlock {
+  background-color: #75FF95;
+  border: 4px solid #00FF00;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top:10px;
 }
